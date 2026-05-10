@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>331</width>
+      <height>451</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>490</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generate Cmake</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>490</y>
+      <width>86</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>490</y>
+      <width>86</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Create img</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>30</y>
+      <width>451</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>58</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Files</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>10</y>
+      <width>58</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Logs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>86</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open Folder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>490</y>
+      <width>86</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>clear logs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>490</y>
+      <width>86</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close Folder</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCOMPILE_VERSiON">
+    <property name="title">
+     <string>config build</string>
+    </property>
+    <widget class="QMenu" name="menuArquiteturas">
+     <property name="title">
+      <string>Arquiteturas</string>
+     </property>
+     <addaction name="actionx86_2"/>
+     <addaction name="actionArm_2"/>
+     <addaction name="actionRiscV_2"/>
+    </widget>
+    <widget class="QMenu" name="menuCmakeConfigs">
+     <property name="title">
+      <string>CmakeConfigs</string>
+     </property>
+     <widget class="QMenu" name="menuInternet">
+      <property name="title">
+       <string>Internet</string>
+      </property>
+      <addaction name="actionIPV4"/>
+      <addaction name="actionIPV6"/>
+      <addaction name="actionVirtualiza_ao_em_rede"/>
+      <addaction name="actionBluethoot"/>
+     </widget>
+     <addaction name="actionNumero_de_Threads"/>
+     <addaction name="actionRAM"/>
+     <addaction name="actionDisco_de_img"/>
+     <addaction name="actionFlags_unicas"/>
+     <addaction name="menuInternet"/>
+     <addaction name="actionC"/>
+     <addaction name="actionC_2"/>
+     <addaction name="actionAudio"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuArquiteturas"/>
+    <addaction name="menuCmakeConfigs"/>
+    <addaction name="separator"/>
+    <addaction name="actionNova_Arquitetura"/>
+   </widget>
+   <widget class="QMenu" name="menuFolder">
+    <property name="title">
+     <string>project</string>
+    </property>
+    <widget class="QMenu" name="menuModel_progect">
+     <property name="title">
+      <string>Model progect</string>
+     </property>
+     <addaction name="actionx86"/>
+     <addaction name="actionArm"/>
+     <addaction name="actionRiscV"/>
+    </widget>
+    <addaction name="actionAdd_folder"/>
+    <addaction name="menuModel_progect"/>
+    <addaction name="actionClose_project"/>
+    <addaction name="actionDefine_path"/>
+   </widget>
+   <addaction name="menuFolder"/>
+   <addaction name="menuCOMPILE_VERSiON"/>
+  </widget>
+  <action name="actionARM">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>ARM</string>
+   </property>
+  </action>
+  <action name="actionx86_64">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>x86_64</string>
+   </property>
+  </action>
+  <action name="actionRISC_V">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>RISC_V</string>
+   </property>
+  </action>
+  <action name="actionNASM">
+   <property name="text">
+    <string>NASM</string>
+   </property>
+  </action>
+  <action name="actionConfig_Qemu">
+   <property name="text">
+    <string>Config Qemu</string>
+   </property>
+  </action>
+  <action name="actionConfig_Nasm">
+   <property name="text">
+    <string>Config Nasm</string>
+   </property>
+  </action>
+  <action name="actionConfig_gcc">
+   <property name="text">
+    <string>Config gcc</string>
+   </property>
+  </action>
+  <action name="actionNumero_de_cores">
+   <property name="text">
+    <string>Numero de threads</string>
+   </property>
+  </action>
+  <action name="actionRAM_para_qemu">
+   <property name="text">
+    <string>RAM para qemu</string>
+   </property>
+  </action>
+  <action name="actionFlags_personalizadas">
+   <property name="text">
+    <string>Flags personalizadas</string>
+   </property>
+  </action>
+  <action name="actionNew_Folder">
+   <property name="text">
+    <string>New Folder</string>
+   </property>
+  </action>
+  <action name="actionPresets">
+   <property name="text">
+    <string>Presets</string>
+   </property>
+  </action>
+  <action name="actionAdd_folder">
+   <property name="text">
+    <string>Open folder</string>
+   </property>
+  </action>
+  <action name="actionx86">
+   <property name="text">
+    <string>x86</string>
+   </property>
+  </action>
+  <action name="actionArm">
+   <property name="text">
+    <string>Arm</string>
+   </property>
+  </action>
+  <action name="actionRiscV">
+   <property name="text">
+    <string>RiscV</string>
+   </property>
+  </action>
+  <action name="actionNova_Arquitetura">
+   <property name="text">
+    <string>Nova Arquitetura</string>
+   </property>
+  </action>
+  <action name="actionx86_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>x86</string>
+   </property>
+  </action>
+  <action name="actionArm_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Arm</string>
+   </property>
+  </action>
+  <action name="actionRiscV_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>RiscV</string>
+   </property>
+  </action>
+  <action name="actionNumero_de_Threads">
+   <property name="text">
+    <string>Numero de Threads:</string>
+   </property>
+  </action>
+  <action name="actionRAM">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>RAM:</string>
+   </property>
+   <property name="toolTip">
+    <string>RAM:</string>
+   </property>
+  </action>
+  <action name="actionDisco_de_img">
+   <property name="text">
+    <string>Tamanho:</string>
+   </property>
+  </action>
+  <action name="actionC">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="actionC_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>C++</string>
+   </property>
+  </action>
+  <action name="actionAudio">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Audio</string>
+   </property>
+  </action>
+  <action name="actionMicrofone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Microfone</string>
+   </property>
+  </action>
+  <action name="actionFlags_unicas">
+   <property name="text">
+    <string>Flags unicas:</string>
+   </property>
+  </action>
+  <action name="actionIPV4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPV4</string>
+   </property>
+  </action>
+  <action name="actionIPV6">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>IPV6</string>
+   </property>
+  </action>
+  <action name="actionVirtualiza_ao_em_rede">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Virtualizaçao em rede</string>
+   </property>
+  </action>
+  <action name="actionBluethoot">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Bluetooth</string>
+   </property>
+  </action>
+  <action name="actionNew_File">
+   <property name="text">
+    <string>New File</string>
+   </property>
+  </action>
+  <action name="actionAdd_File">
+   <property name="text">
+    <string>Add File</string>
+   </property>
+  </action>
+  <action name="actionClose_project">
+   <property name="text">
+    <string>Close project</string>
+   </property>
+  </action>
+  <action name="actionDefine_path">
+   <property name="text">
+    <string>Define path</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
